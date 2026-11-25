@@ -1,4 +1,4 @@
-# Trace the Signal — Detection and Analysis
+# Trace the Signal detection and analysis
 
 ## Focus
 
@@ -8,7 +8,7 @@ I traced a suspicious sign-in through the phishing email and mailbox changes, th
 
 ### Found the unusual signins
 
-I began with the affected account's Entra ID signin events. I compared the time, source address, location, application, and authentication result so I could separate expected activity from successful sign-ins that needed a closer look. The results pointed to unusual successful signins from Amsterdam.
+I began with the affected account's Entra id sign in events. I compared the time, source address, location, application, and authentication result so I could separate expected activity from successful signins that needed a closer look. The results pointed to unusual successful signins from Amsterdam.
 
 ```spl
 index=ir sourcetype=azure:aad:signin userPrincipalName="l.chen@nexusfinancial.thm"
@@ -109,4 +109,4 @@ index=ir sourcetype=o365:reporting:messagetrace SenderAddress="hr-support@nexus-
 Correlating identity, mail, and audit events helped me build a clearer timeline than reviewing each source on its own.
 
 
-I would alert on unusual successful sign-ins, unexpected inbox rule creation, and phishing messages sent to multiple employees.
+I would alert on unusual successful signins, unexpected inbox rule creation and phishing messages sent to multiple employees.
